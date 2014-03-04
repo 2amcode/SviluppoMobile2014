@@ -1,0 +1,7 @@
+http://projects.spring.io/spring-android/
+
+http://loopj.com/android-async-http/
+
+https://github.com/octo-online/robospice
+
+https://code.google.com/p/google-gson/
