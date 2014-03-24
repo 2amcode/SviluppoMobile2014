@@ -14,5 +14,5 @@
 
 - (IBAction)openPopover:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-@property(nonatomic, strong)UIPopoverController * controller;
+@property(nonatomic, strong)UIPopoverController * popController;
 @end

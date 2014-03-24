@@ -38,5 +38,9 @@
         [self.view layoutIfNeeded];
     }];
     
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
 }
 @end

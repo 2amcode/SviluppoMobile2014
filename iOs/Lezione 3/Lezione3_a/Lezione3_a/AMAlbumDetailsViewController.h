@@ -13,8 +13,13 @@
 
 @protocol AlbumDetailsEditingDelegate <NSObject>
 
+
 //-(void)albumDetailsViewControllerDidSave:(AMAlbumDetailsViewController *)controller;
+@required
 -(void)albumDetailsViewController:(AMAlbumDetailsViewController *)controller didAddAlbum:(Album*)album;
+
+
+@optional
 -(void)albumDetailsViewControllerDidCancel:(AMAlbumDetailsViewController *)controller;
 
 @end

@@ -35,7 +35,7 @@
         <!--Albums Table View Controller-->
         <scene sceneID="4sq-sB-ean">
             <objects>
-                <tableViewController id="350-5P-m2I" customClass="AMAlbumsTableViewController" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="350-5P-m2I" customClass="AMAlbumsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="UUf-VL-Ffz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" id="6xA-79-tYU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2gc-hs-vXn">
                             <connections>
-                                <segue destination="IC1-Ib-n5N" kind="modal" identifier="AddAlbum" id="UBX-BN-00a"/>
+                                <segue destination="IC1-Ib-n5N" kind="modal" identifier="AddAlbum" id="uCp-GP-37S"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,36 +96,23 @@
         <!--Album Details View Controller - Add Album-->
         <scene sceneID="fj5-5F-CTT">
             <objects>
-                <tableViewController storyboardIdentifier="detailsVC" id="rC3-C4-YfW" customClass="AMAlbumDetailsViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="detailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rC3-C4-YfW" customClass="AMAlbumDetailsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="lLv-jM-f5p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <pickerView key="tableFooterView" contentMode="scaleToFill" id="2Hr-Y3-0KC">
+                            <rect key="frame" x="0.0" y="340" width="320" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </pickerView>
                         <sections>
                             <tableViewSection headerTitle="ALBUM" id="jx2-Cb-bh1">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I87-SM-ML1">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I87-SM-ML1" id="XrV-H5-tr3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NOME ALBUM" minimumFontSize="17" id="2Op-5x-0gw">
-                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="BAND" id="ZbH-nG-em7">
+                            <tableViewSection headerTitle="BAND" footerTitle="Indica il nome dell'album" id="ZbH-nG-em7">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="K6g-Fh-vkw">
-                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="167" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K6g-Fh-vkw" id="HMl-p3-e2E">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -137,6 +124,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KG6-mQ-Vgu">
+                                                    <rect key="frame" x="258" y="7" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -145,11 +136,17 @@
                             <tableViewSection headerTitle="RATING" id="s2b-Ax-ONU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2I8-o0-VjV">
-                                        <rect key="frame" x="0.0" y="303" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="286" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2I8-o0-VjV" id="Ppr-NK-KIK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Jgt-NQ-jON">
+                                                    <rect key="frame" x="55" y="7" width="227" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </slider>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -172,7 +169,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="txtAlbumTitle" destination="2Op-5x-0gw" id="zu3-di-3cf"/>
                         <outlet property="txtBandName" destination="4L2-pd-rgA" id="d56-q3-0NT"/>
                     </connections>
                 </tableViewController>
@@ -183,7 +179,7 @@
         <!--Navigation Controller-->
         <scene sceneID="67k-wP-Tlg">
             <objects>
-                <navigationController definesPresentationContext="YES" id="IC1-Ib-n5N" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IC1-Ib-n5N" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Zlg-eV-dGa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T7m-T1-0ur">
                         <autoresizingMask key="autoresizingMask"/>
@@ -230,6 +226,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UBX-BN-00a"/>
+        <segue reference="gae-7U-RBk"/>
     </inferredMetricsTieBreakers>
 </document>

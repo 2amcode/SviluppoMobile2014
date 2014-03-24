@@ -34,5 +34,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)gotoAlbumApp:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:@"albumapp://dato1=dato_1&dato2=secondo_dato"];
+    [[UIApplication sharedApplication]openURL:url];
+}
 
 @end

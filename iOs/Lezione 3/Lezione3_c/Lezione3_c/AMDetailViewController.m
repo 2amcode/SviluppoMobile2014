@@ -73,7 +73,7 @@
 - (IBAction)openPopover:(id)sender {
     AMContentViewController * viewController = [[AMContentViewController alloc]initWithNibName:@"AMContentViewController" bundle:[NSBundle mainBundle]];
     
-    self.controller = [[UIPopoverController alloc]initWithContentViewController:viewController];
-    [_controller presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    _popController = [[UIPopoverController alloc]initWithContentViewController:viewController];
+    [_popController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny    animated:YES];
 }
 @end
