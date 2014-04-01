@@ -43,7 +43,6 @@
                                 <connections>
                                     <outlet property="bandLabel" destination="BAA-Nt-K1w" id="baa-kA-yQd"/>
                                     <outlet property="ratingImg" destination="iSU-EE-YQd" id="ESj-K6-8A7"/>
-                                    <outlet property="titleLabel" destination="PQI-bl-Ssf" id="vJu-7u-gyw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

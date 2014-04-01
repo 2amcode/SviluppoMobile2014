@@ -7,7 +7,7 @@
 //
 
 #import "AMAlbumListViewController.h"
-#import "ALbum.h"
+#import "Album.h"
 #import "AMAlbumTableViewCell.h"
 #import "AMAlbumEditViewController.h"
 
