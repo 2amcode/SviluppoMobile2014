@@ -19,16 +19,11 @@
 {
     [super viewDidLoad];
     albums = [[NSMutableArray alloc]init];
-    NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://dev.2amcode.com/corsoios/albums.php"]
-                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                          timeoutInterval:60.0];
+
     
-    if(NO){
-        receivedData = [NSMutableData dataWithCapacity: 0];
+    NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://dev.2amcode.com/corsoios/albums.php"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0 ];
     
-        NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    }else{
-        [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             NSError *error;
             NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
             NSArray *albumList = [dict objectForKey:@"albums"];
@@ -45,9 +40,13 @@
                 //gestione errore
             }
         }];
-    }
+    
 
     
+}
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    NSLog(@"Ricevuto errore: %@", [error localizedDescription]);
+
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -84,8 +83,7 @@
     if(error){
         //gestione errore
     }
-    connection = nil;
-    receivedData = nil;
+   
 }
 - (void)didReceiveMemoryWarning
 {

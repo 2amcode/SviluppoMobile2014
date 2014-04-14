@@ -1,0 +1,24 @@
+
+/* Class = "IBUILabel"; text = "Seconda vista"; ObjectID = "29h-N2-YGT"; */
+"29h-N2-YGT.text" = "Seconda vista";
+
+/* Class = "IBUIViewController"; title = "Primo"; ObjectID = "CZ4-MO-1fc"; */
+"CZ4-MO-1fc.title" = "Primo";
+
+/* Class = "IBUITextView"; text = "Questo testo è localizzato in italiano"; ObjectID = "DcM-Fx-MKR"; */
+"DcM-Fx-MKR.text" = "Questo testo è localizzato in italiano";
+
+/* Class = "IBUIViewController"; title = "Secondo"; ObjectID = "QUy-BD-bpt"; */
+"QUy-BD-bpt.title" = "Secondo";
+
+/* Class = "IBUITabBarItem"; title = "Secondo"; ObjectID = "Z7h-1E-pvt"; */
+"Z7h-1E-pvt.title" = "Secondo";
+
+/* Class = "IBUILabel"; text = "Prima vista"; ObjectID = "Zhg-ve-WU7"; */
+"Zhg-ve-WU7.text" = "Prima vista";
+
+/* Class = "IBUITextView"; text = "Questo testo è localizzato in italiano"; ObjectID = "b4t-di-LMa"; */
+"b4t-di-LMa.text" = "Questo testo è localizzato in italiano";
+
+/* Class = "IBUITabBarItem"; title = "Primo"; ObjectID = "u1e-5L-l1D"; */
+"u1e-5L-l1D.title" = "Primo";

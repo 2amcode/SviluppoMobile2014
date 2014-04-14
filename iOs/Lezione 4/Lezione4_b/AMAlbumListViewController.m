@@ -33,16 +33,7 @@
 {
     [super viewDidLoad];
     
-//    
-//    NSArray * tecnologia = @[@"Java", @".Net", @"Cocoa", @"Javascript", @"Ruby", [NSNumber numberWithInt:5], @[[NSNumber numberWithFloat:0.345f], @"Valore"]];
-//    
-//    [tecnologia writeToFile:[documentsDirectory stringByAppendingPathComponent:@"tecnologia.plist"] atomically:YES];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning

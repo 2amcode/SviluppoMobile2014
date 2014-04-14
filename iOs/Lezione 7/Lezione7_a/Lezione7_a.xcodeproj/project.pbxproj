@@ -39,7 +39,7 @@
 		2D3A098F18EADD0900F1EC39 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2D3A09AA18EADFF200F1EC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D3A09B018EAE5DF00F1EC39 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Localizable.strings; sourceTree = "<group>"; };
-		2D3A09B518EAE63700F1EC39 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = it; path = it.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D3A09F718EB25E000F1EC39 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +202,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D3A098018EADD0900F1EC39 /* Base */,
-				2D3A09B518EAE63700F1EC39 /* it */,
+				2D3A09F718EB25E000F1EC39 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -341,6 +341,7 @@
 				2D3A09A118EADD0900F1EC39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
